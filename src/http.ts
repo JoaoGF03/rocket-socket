@@ -19,8 +19,7 @@ app.use(express.static(join(process.cwd(), 'public')))
 
 export const io = new Server(server)
 
-io.on('connection', (socket) => {
-  console.log('🚀 ~ file: http.ts ~ line 15 ~ io.on ~ socket', socket.id)
+io.on('connection', () => {
 })
 
 app.get('/', (req, res) => {
