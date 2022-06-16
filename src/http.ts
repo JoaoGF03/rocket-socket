@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import express from 'express'
 import { join } from 'node:path'
 import { createServer } from 'http'
@@ -12,7 +13,7 @@ export const server = createServer(app)
 mongoose.connect('mongodb://localhost/rocket-socket', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-} as ConnectOptions )
+} as ConnectOptions)
 
 app.use(express.static(join(process.cwd(), 'public')))
 
