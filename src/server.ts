@@ -1,11 +1,6 @@
-import express from 'express'
+import { server } from "./http"
+import './websocket/ChatService'
 
-const app = express()
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.listen(3000, () => {
+server.listen(3000, () => {
   console.log('🚀 ~ file: server.ts ~ app.listen ~ 3000')
 })
