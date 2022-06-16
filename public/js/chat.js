@@ -22,7 +22,7 @@ function onLoad() {
     avatar,
   });
 
-  socket.on("new_users", (user) => {
+  socket.on("new_user", (user) => {
     const existInDiv = document.getElementById(`user_${user._id}`);
 
     if (!existInDiv) {
