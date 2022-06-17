@@ -1,8 +1,9 @@
 import mongoose, { Document, Schema } from 'mongoose';
 import { v4 as uuid } from 'uuid';
+import { User } from './User';
 
 export type ChatRoom = Document & {
-  idUsers: string[];
+  idUsers: User[];
   idChatRoom: string;
 };
 
